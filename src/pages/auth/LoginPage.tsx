@@ -32,7 +32,7 @@ export default function LoginPage() {
   }, [location.state]);
 
   if (initializing) {
-    return <LoadingOverlay fullScreen message="Carregando sessão..." />;
+    return <LoadingOverlay fullScreen message="Carregando sessao..." />;
   }
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -62,8 +62,8 @@ export default function LoginPage() {
         <header>
           <h1>Acesse suas tarefas</h1>
           <p>
-            Informe suas credenciais cadastradas para desbloquear o dashboard
-            protegido por JWT.
+            Informe suas credenciais para desbloquear o dashboard protegido por
+            JWT.
           </p>
         </header>
 
@@ -99,21 +99,21 @@ export default function LoginPage() {
         </form>
 
         <p className="auth-hint">
-          Ainda não possui conta?{' '}
-          <Link to="/register">Crie agora mesmo.</Link>
+          Ainda nao possui conta? <Link to="/register">Crie agora mesmo.</Link>
         </p>
       </section>
 
       <aside className="auth-hero">
-        <h2>Mini Projeto - PostgreSQL</h2>
+        <h2>Mini Projeto - Controle de Tarefas</h2>
         <p>
-          Fluxo completo com registro, login, controle de sessão via JWT e CRUD
+          Fluxo completo com registro, login, controle de sessao via JWT e CRUD
           de tarefas totalmente protegido. Todo o estado fica sincronizado com o
-          backend real usando Fetch API.
+          backend real usando Fetch API (funciona tanto com MongoDB quanto com
+          PostgreSQL).
         </p>
         <ul>
           <li>Armazenamento do token via LocalStorage</li>
-          <li>Interceptação de 401 para redirecionar ao login</li>
+          <li>Interceptacao de 401 para redirecionar ao login</li>
           <li>Toasts com links para acompanhar deploys</li>
         </ul>
       </aside>

@@ -26,7 +26,7 @@ export default function RegisterPage() {
   }, [isAuthenticated, navigate]);
 
   if (initializing) {
-    return <LoadingOverlay fullScreen message="Preparando formulário..." />;
+    return <LoadingOverlay fullScreen message="Preparando formulario..." />;
   }
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -41,8 +41,8 @@ export default function RegisterPage() {
       await registerRequest(form);
       toastWithLink(
         'success',
-        'Cadastro realizado! Você já pode fazer login.',
-        'Abrir documentação'
+        'Cadastro realizado! Voce ja pode fazer login.',
+        'Abrir documentacao'
       );
       navigate('/login', { state: { email: form.email }, replace: true });
     } catch (error) {
@@ -58,8 +58,8 @@ export default function RegisterPage() {
         <header>
           <h1>Crie sua conta</h1>
           <p>
-            Informe seus dados para gerar um usuário e testar o fluxo completo
-            com PostgreSQL e JWT.
+            Informe seus dados para gerar um usuario e testar o fluxo completo
+            com JWT.
           </p>
         </header>
 
@@ -105,20 +105,20 @@ export default function RegisterPage() {
         </form>
 
         <p className="auth-hint">
-          Já tem conta? <Link to="/login">Faça login.</Link>
+          Ja tem conta? <Link to="/login">Faca login.</Link>
         </p>
       </section>
 
       <aside className="auth-hero">
         <h2>Por que criar agora?</h2>
         <p>
-          Ter um usuário próprio facilita a visualização do CRUD de tarefas,
-          já que cada token só enxerga os dados do dono.
+          Ter um usuario proprio facilita a visualizacao do CRUD de tarefas, ja
+          que cada token so enxerga os dados do dono.
         </p>
         <ul>
           <li>Senha criptografada com bcrypt</li>
           <li>Email normalizado e validado via backend</li>
-          <li>Resposta com mensagens amigáveis</li>
+          <li>Resposta com mensagens amigaveis</li>
         </ul>
       </aside>
     </div>
